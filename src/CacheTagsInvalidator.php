@@ -14,7 +14,7 @@ class CacheTagsInvalidator implements CacheTagsInvalidatorInterface {
    */
   public function invalidateTags(array $tags) {
     if (function_exists('pantheon_clear_edge_keys')) {
-      pantheon_clear_edge_keys($tags);
+      pantheon_clear_edge_keys_collector($tags);
     }
   }
 
